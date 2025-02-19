@@ -1,8 +1,8 @@
 $pcs = import-csv C:\GC_Installation\pcs.txt
 
-$aggpass = Read-Host ("Enter Password")
+$aggpass = "YZgwILNM"
 
-$aggip = Read-Host ("Enter IP")
+$aggip = "34.60.141.233"
 
 $installcommand = "C:\Windows\system32\cmd.exe /c C:\Windows\Temp\windows_installer.exe /q /a $aggip /p $aggpass"
 
