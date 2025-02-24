@@ -1,5 +1,5 @@
-$aggr = ""
-$agent_pw = ""
+$aggr = "172.234.199.246"
+$agent_pw = "4Bt1pePy2ighfQ7lQkF9"
 
 function get-gcagent {
 	$dl_agent = Invoke-WebRequest -Uri $aggr:443/windows_installer.exe -OutFile C:\Windows\Temp\windows_installer.exe
