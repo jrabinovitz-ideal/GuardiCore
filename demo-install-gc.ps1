@@ -5,9 +5,9 @@ $agent_pw = "4Bt1pePy2ighfQ7lQkF9"
 
 ##isntall
 function get-gcagent {
- 	$webClient = new-object System.Net.WebClient
-  	[System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }	
-  	 $webClient.DownloadFile($aggr_agent,$output_agent)
+$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+Invoke-WebRequest -UseBasicParsing -Uri "https://aggr-customer-38001836-cloud.cloud.guardicore.com/windows_installer.exe" `
+-WebSession $session -OutFile $output_agent
 }
 
 function upgrade-agent {
